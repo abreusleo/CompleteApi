@@ -36,7 +36,7 @@
 - https://docs.aws.amazon.com/
 
 ## How to run your api
-1. Go to .\CompleteApi\CompleteApi
+1. Go to Dockerfile directory
 2. Run ```docker build . -t {image_name}```
 3. Run ```docker run -d --rm -p {PORT_HTTP}:{PORT_HTTP} -p {PORT_HTTPS}:{PORT_HTTPS} -e ASPNETCORE_HTTP_PORT=https://+:{PORT_HTTPS} -e ASPNETCORE_URLS=http://+:{PORT_HTTP} {image_name}```
 ## have fun :D
