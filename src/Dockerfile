@@ -5,10 +5,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["CompleteApi/CompleteApi.csproj", "CompleteApi/"]
-RUN dotnet restore "CompleteApi/CompleteApi.csproj"
-COPY . .
-WORKDIR "/src/CompleteApi"
+COPY *.csproj ./
+RUN dotnet restore "CompleteApi.csproj"
+WORKDIR "/src"
+COPY . ./
 RUN dotnet build "CompleteApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
