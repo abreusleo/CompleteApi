@@ -17,7 +17,7 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
-        run: dotnet restore
-        working-directory: /src
+        run: ls
+        working-directory: CompleteApi\Api1
       - name: Build
         run: dotnet build --configuration Release --no-restore
