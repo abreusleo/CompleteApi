@@ -18,5 +18,6 @@ jobs:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
         run: dotnet restore
+        working-directory: /src
       - name: Build
         run: dotnet build --configuration Release --no-restore
