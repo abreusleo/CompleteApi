@@ -2,9 +2,11 @@ name: dotnet package
 
 on: [push]
 
+env:
+  BASE_DIR: Api1
+
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -16,7 +18,11 @@ jobs:
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
+          
       - name: Install dependencies
         run: dotnet restore
+        working-directory: ${{env.BASE_DIR}}
+
       - name: Build
         run: dotnet build --configuration Release --no-restore
+        working-directory: ${{env.BASE_DIR}}
