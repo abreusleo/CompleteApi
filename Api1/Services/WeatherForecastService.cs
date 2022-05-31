@@ -19,7 +19,7 @@ public class WeatherForecastService : IWeatherForecastService
 
     public WeatherForecast[] GetWeatherForecast()
     {
-        _logger.LogTrace("{Context} - GetWeatherForecast method. Teste", LogContext);
+        _logger.LogTrace("{Context} - GetWeatherForecast method.", LogContext);
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateTime.Now.AddDays(index),
