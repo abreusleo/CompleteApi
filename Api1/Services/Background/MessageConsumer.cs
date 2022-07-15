@@ -26,22 +26,24 @@ public class MessageConsumer : BackgroundService
         _channel = connection.CreateModel();
         _channel.QueueDeclare(queue: "Api2_Message_Api1", durable: false, exclusive: false, autoDelete: false,
             arguments: null);
-
     }
-    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    protected override Task ExecuteAsync(CancellationToken stoppingToken)
     {
         _logger.LogInformation("{Context}:ExecuteAsync - Trying to consume new message", Context);
-        while (!stoppingToken.IsCancellationRequested)
+        Consume();
+        
+        return Task.CompletedTask;
+    }
+    private void Consume()
+    {
+        EventingBasicConsumer consumer = new(_channel);
+        consumer.Received += (sender, args) =>
         {
-            EventingBasicConsumer consumer = new(_channel);
-            consumer.Received += (sender, args) =>
-            {
-                string message = Encoding.UTF8.GetString(args.Body.ToArray());
-                _logger.LogInformation("{Context}:ExecuteAsync - New message: {Message}", Context, message);
-            };
-            _channel.BasicConsume(queue: "Api2_Message_Api1",
-                autoAck: true,
-                consumer: consumer);
-        }
+            string message = Encoding.UTF8.GetString(args.Body.ToArray());
+            _logger.LogInformation("{Context}:ExecuteAsync - New message: {Message}", Context, message);
+        };
+        _channel.BasicConsume(queue: "Api2_Message_Api1",
+            autoAck: true,
+            consumer: consumer);
     }
 }
