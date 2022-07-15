@@ -1,4 +1,5 @@
 using CompleteApi.Services;
+using CompleteApi.Services.Background;
 using CompleteApi.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 builder.Services.AddSingleton<IMessageService, MessageService>();
 builder.Services.AddSingleton<ConfigService>();
+builder.Services.AddHostedService<MessageConsumer>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

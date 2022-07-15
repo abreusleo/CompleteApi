@@ -29,7 +29,7 @@ public class MessageService : IMessageService
         IConnection connection = factory.CreateConnection();
         _channel = connection.CreateModel();
         
-        _channel.QueueDeclare(queue: "FirstQueue", durable: false, exclusive: false, autoDelete: false,
+        _channel.QueueDeclare(queue: "Api1_Message_Ap2", durable: false, exclusive: false, autoDelete: false,
             arguments: null);
         _logger.LogInformation("{Context}:Constructor - MessageService is initialized.", Context);
 }
@@ -39,7 +39,7 @@ public class MessageService : IMessageService
         try
         {
             var body = Encoding.UTF8.GetBytes(message);
-            _channel.BasicPublish(exchange:"", routingKey:"FirstQueue",basicProperties:null,body:body);
+            _channel.BasicPublish(exchange:"", routingKey:"Api1_Message_Ap2",basicProperties:null,body:body);
             return true;
         }
         catch (Exception e)
