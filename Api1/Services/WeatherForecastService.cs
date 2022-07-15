@@ -1,4 +1,4 @@
-﻿using CompleteApi.Interface;
+﻿using CompleteApi.Services.Interfaces;
 
 namespace CompleteApi.Services;
 
@@ -17,7 +17,7 @@ public class WeatherForecastService : IWeatherForecastService
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    public WeatherForecast[] GetWeatherForecast()
+    public IEnumerable<WeatherForecast> GetWeatherForecast()
     {
         _logger.LogTrace("{Context} - GetWeatherForecast method.", LogContext);
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast

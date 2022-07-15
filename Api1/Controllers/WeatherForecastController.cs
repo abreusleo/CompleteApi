@@ -1,4 +1,4 @@
-using CompleteApi.Interface;
+using CompleteApi.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CompleteApi.Controllers;
