@@ -9,8 +9,16 @@ public interface ICalculateService
 
 public class CalculateService : ICalculateService
 {
+    private readonly ILogger<CalculateService> _logger;
+    private const string Context = "CalculateService";
+    public CalculateService(ILogger<CalculateService> logger)
+    {
+        _logger = logger;
+    }
+
     public double Calculate(CalculatorRequestDto calculatorRequest)
     {
+        _logger.LogTrace("{Context}:Calculate - Starting operation...", Context);
         return calculatorRequest.Operation switch
         {
             Operation.SUM => calculatorRequest.A + calculatorRequest.B,

@@ -43,6 +43,7 @@ public class MessageService : IMessageService
     {
         try
         {
+            _logger.LogTrace("{Context}:Enqueue - Publishing response...", Context);
             byte[] body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(calculatorResponse));
             _channel.BasicPublish(exchange:"", routingKey:_config.QueuesConfig.CalculateResponse,basicProperties:null,body:body);
             return true;
