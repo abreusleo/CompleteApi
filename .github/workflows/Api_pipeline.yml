@@ -3,7 +3,7 @@ name: dotnet package
 on: [push]
 
 env:
-  BASE_DIR: Api1
+  BASE_DIR: Api
 
 jobs:
   build:
