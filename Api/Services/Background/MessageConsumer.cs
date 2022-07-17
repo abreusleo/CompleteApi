@@ -2,7 +2,7 @@
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace CompleteApi.Services.Background;
+namespace Api.Services.Background;
 
 public class MessageConsumer : BackgroundService
 {

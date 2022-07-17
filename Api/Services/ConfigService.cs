@@ -1,4 +1,4 @@
-﻿namespace CompleteApi.Services;
+﻿namespace Api.Services;
 
 public class ConfigService
 {

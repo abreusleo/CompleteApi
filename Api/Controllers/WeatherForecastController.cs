@@ -1,7 +1,7 @@
-using CompleteApi.Services.Interfaces;
+using Api.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CompleteApi.Controllers;
+namespace Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]

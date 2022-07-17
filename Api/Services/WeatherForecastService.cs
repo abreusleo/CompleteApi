@@ -1,6 +1,6 @@
-﻿using CompleteApi.Services.Interfaces;
+﻿using Api.Services.Interfaces;
 
-namespace CompleteApi.Services;
+namespace Api.Services;
 
 public class WeatherForecastService : IWeatherForecastService
 {

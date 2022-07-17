@@ -1,4 +1,4 @@
-﻿namespace CompleteApi.Services.Interfaces;
+﻿namespace Api.Services.Interfaces;
 
 public interface IWeatherForecastService
 {

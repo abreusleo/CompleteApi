@@ -1,9 +1,9 @@
 ﻿using RabbitMQ.Client;
 using System.Text;
 using System.Text.Json;
-using CompleteApi.Dtos;
+using Api.Dtos;
 
-namespace CompleteApi.Services;
+namespace Api.Services;
 
 public interface IMessageService
 { 

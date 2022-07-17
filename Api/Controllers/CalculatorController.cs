@@ -1,8 +1,8 @@
-﻿using CompleteApi.Dtos;
-using CompleteApi.Services;
+﻿using Api.Dtos;
+using Api.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CompleteApi.Controllers;
+namespace Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]

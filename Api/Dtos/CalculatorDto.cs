@@ -1,4 +1,4 @@
-﻿namespace CompleteApi.Dtos;
+﻿namespace Api.Dtos;
 
 public class CalculatorRequestDto
 {

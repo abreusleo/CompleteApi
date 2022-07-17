@@ -1,6 +1,6 @@
-using CompleteApi.Services;
-using CompleteApi.Services.Background;
-using CompleteApi.Services.Interfaces;
+using Api.Services;
+using Api.Services.Background;
+using Api.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
