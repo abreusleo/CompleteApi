@@ -10,6 +10,18 @@
     depends_on:
       rabbitmq:
         condition: service_healthy
+  
+  calculator:
+    build: "../Calculator/."
+    image: "dev/completeapi/calculator:${tag}"
+    container_name: calculator
+    ports:
+      - "6000:6001"
+    env_file:
+      - .env
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
 
   rabbitmq:
     image: rabbitmq:3-management
