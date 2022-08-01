@@ -6,9 +6,9 @@
 - Create one docker-compose.yml to run all services
 - Create decent pipeline on github
 - Create communication between services using RabbitMq
+- Create unit tests
 - Create database to storage calculations
 - Create cache to avoid useless communication
-- Create unit tests
 - Create communication between services using GRPCS
 - Use kubernetes instead docker
 - Deploy it on aws
