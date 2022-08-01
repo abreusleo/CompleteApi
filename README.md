@@ -5,7 +5,10 @@
 - Create another api so we can use Microservices architecture
 - Create one docker-compose.yml to run all services
 - Create decent pipeline on github
-- Create communication between services using RabbitMq and GRPCS
+- Create communication between services using RabbitMq
+- Create database to storage calculations
+- Create cache to avoid useless communication
+- Create communication between services using GRPCS
 - Create unit tests
 - Stress test the application
 - Use kubernetes instead docker
