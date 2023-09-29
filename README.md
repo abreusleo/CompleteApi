@@ -15,17 +15,20 @@
 - Stress test the application
 
 ## Docs
-### 1. Microservices
-- https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
-### 2. Docker
+### 1. Microservices ✅
+- https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices 
+### 2. Docker ✅
 - https://docs.docker.com/
-### 3. APIs
+### 3. APIs ✅
 - https://docs.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-6.0&tabs=visual-studio
 - https://docs.docker.com/samples/dotnetcore/
-### 4. Github Actions
+### 4. Github Actions ✅
 - https://docs.github.com/pt/actions
-### 5. RabbitMq
+### 5. RabbitMq ✅
 - https://www.rabbitmq.com/features.html
+--------------------------------------------------
+Decided to quit this project to finish my Final Project, but here is the road map
+
 ### 6. Grpc
 - https://grpc.io/about/
 - https://grpc.io/docs/
